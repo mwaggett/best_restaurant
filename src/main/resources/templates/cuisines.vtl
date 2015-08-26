@@ -1,0 +1,22 @@
+#if ($cuisines.size() > 0)
+  <div class="col-md-6">
+    <table class="table">
+      <thead>
+        <th>Cuisines</th>
+      </thead>
+      <tbody>
+        #foreach ($cuisine in $cuisines)
+          <tr class="success">
+            <td>
+              <a href="/cuisines/$cuisine.getId()">$cuisine.getCuisineName()</a>
+            </td>
+          </tr>
+        #end
+      </tbody>
+    </table>
+  </div>
+#else
+  <div>
+    <h3>Oops! There are no cuisines to view!</h3>
+  </div>
+#end
