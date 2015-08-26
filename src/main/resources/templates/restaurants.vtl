@@ -1,0 +1,18 @@
+<div class="col-md-6" id="restaurants" name="restaurants" float="right">
+#if($restaurants)
+  <table class="table">
+    <thead>
+      <th>Restaurants</th>
+    </thead>
+    <tbody>
+      #foreach ($restaurant in $restaurants)
+        <tr class="success">
+          <td>
+            $restaurant.getRestaurantName()
+          </td>
+        </tr>
+      #end
+    </tbody>
+  </table>
+#end
+</div>

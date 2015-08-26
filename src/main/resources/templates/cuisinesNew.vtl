@@ -1,7 +1,6 @@
 <div class="row">
 
   <div class="col-md-6" id="cuisines" name="cuisines" float="left">
-  #if($cuisines.size() > 0)
       <table class="table">
         <thead>
           <th>Cuisines</th>
@@ -16,11 +15,32 @@
           #end
         </tbody>
       </table>
-  #else
+  <!-- #else
     <div>
       <h3>Oops! There are no cuisines to view!</h3>
     </div>
+  #end -->
+  </div>
+
+
+  <div class="col-md-6" id="restaurants" name="restaurants" float="right">
+  #if($restaurants)
+    <table class="table">
+      <thead>
+        <th>Restaurants</th>
+      </thead>
+      <tbody>
+        #foreach ($restaurant in $restaurants)
+          <tr class="success">
+            <td>
+              $restaurant.getRestaurantName()
+            </td>
+          </tr>
+        #end
+      </tbody>
+    </table>
   #end
+  <a href="/cuisines/$cuisine.getId()/restaurants/new">Add a restaurant</a>
   </div>
 
 
