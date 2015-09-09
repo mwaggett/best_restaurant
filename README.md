@@ -1,25 +1,40 @@
-# Application Name
+# Best Restaurants ~UNFINISHED~
 
-##### _{Brief description of application}, {Date of current version}_
+##### _CRUD practice for Epicodus, 26 August 2015_
 
-#### By **Molly Waggett**
+#### By **Chitra Atmakuru & Molly Waggett**
 
 ## Description
 
-{This is a detailed description of your application. Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. Do you want other developers to use this code in their apps? Talk about things like that here in simple terms.}
+This app allows a user to view and add cuisines and restaurants within those cuisines. _**The web interface is messy/incomplete and does not include all CRUD functionality yet.**_
 
 ## Setup
 
+* Set up the database in PostgreSQL by running the following commands in your terminal:
+```
+  psql
+  CREATE DATABASE best_restaurants;
+  \c best_restaurants;
+  CREATE TABLE cuisines (id serial PRIMARY KEY, name varchar);
+  CREATE TABLE restaurants (id serial PRIMARY KEY, name varchar, description text, cuisine_id int);
+```
+* If you wish to run tests, create a test database:
+```
+  CREATE DATABASE best_restaurants_test WITH TEMPLATE best_restaurants;
+```
 * Clone this repository.
 * Using the command line, navigate to the top level of the cloned directory.
 * Make sure you have gradle installed. Then run the following command in your terminal:
-* _gradle run_
+```
+  gradle run
+```
 * Go to localhost:4567.
 * Go!
 
 ## Technologies Used
 
 * Java
+* PostgreSQL
 * Spark
 * Velocity
 * Gradle
@@ -28,7 +43,7 @@
 
 ### Legal
 
-Copyright (c) 2015 **Molly Waggett**
+Copyright (c) 2015 **Chitra Atmakuru & Molly Waggett**
 
 This software is licensed under the MIT license.
 
